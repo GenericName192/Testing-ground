@@ -3,8 +3,18 @@
   padding: 0;
 }
 
-body {
-  color: purple;
+:root {
+  --bg-color: white;
+  --text-color: black;
+}
+
+#theme-toggle:checked ~ .test-div {
+  --bg-color: #1e1e1e;
+  --text-color: #f0f0f0;
+}
+
+.test-div {
+  color: var(--text-color);
   font-size: 2rem;
   background-image: url("../images/01-02-02_background-img.jpg");
   height: 100vh;
